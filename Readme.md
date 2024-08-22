@@ -1,1 +1,1 @@
-readme
+Projeto estudando a funcionalidades de um jogo de apostas estilo "Tigrinho"
