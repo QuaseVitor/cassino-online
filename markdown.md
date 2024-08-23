@@ -1,3 +1,8 @@
 Update especifico para testes 
 
-Esta versão serve apenas para testar o balanceamento da taxa de vitoria do jogo. Deverá ser desconsiderada futuramente.
+Versão oficial, sem automatização de autojogadas. 
+
+# Adições:
+    - Garantia de primeira vitoria + balanceamento das 2 seguintes;
+    - Ajustes na probabilidade de vitoria dependendo do valor jogado;
+    - Alterações em textos de input.

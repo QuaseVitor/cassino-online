@@ -1,23 +1,15 @@
 from random import randint
 import os
-
-saldo = 1000
+saldo = int(input("Insira quanto quer depositar para jogar: "))
 
 multi = 0
 balan = 0
 jogadas = 0
 
-#Experimental
-win = 0
-lose = 0
-
 while jogadas != 100:   
     print("Seu saldo atual é de ", saldo)
-    #valor = int(input("Quanto quer gastar?  R$  "))
-    valor = randint(5,21)
+    valor = int(input("Quanto quer gastar?  R$  "))
     os.system("cls")
-    print(valor)
-    print("Balanço atual: ",balan)
      
 # Balanço de 3 primeiras jogadas    
      
@@ -81,24 +73,19 @@ while jogadas != 100:
         print("Parabens voce ganhou R$", valor)
         balan = 0
         
-        
-    # experimento
-        win += 1
+
         
     else:
         print("Poxa, não foi dessa vez. vamos outra?")
         balan += 1  
         valor = valor*-1
 
-    # experimento
-        lose += 1
- 
+
     saldo += valor   
     
     jogadas += 1
     print( "Vezes jogadas: ",jogadas)
-    
-    print("Vitorias: ", win, "derrotas ", lose)
+
     
 #Quando o saldo zerar    
     
