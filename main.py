@@ -7,8 +7,8 @@ balan = 0
 jogadas = 0
 
 while jogadas != 100:   
-    print("Seu saldo atual é de ", saldo)
-    valor = int(input("Quanto quer gastar?  R$  "))
+    print("Seu saldo atual é de", saldo)
+    valor = int(input("Quanto quer Apostar?  R$  "))   
     os.system("cls")
      
 # Balanço de 3 primeiras jogadas    
@@ -65,38 +65,44 @@ while jogadas != 100:
         teste1 = teste
         teste2 = teste
     
+    
+    print("---------------------------------Lucky Tiger------------------------------------")
+    print("    ")
+    
     print(teste, teste1, teste2 )
 
+    print("    ")
     if teste == teste1 and teste == teste2 and teste1 == teste2:
         
         valor = valor*multi
-        print("Parabens voce ganhou R$", valor)
+        print('\x1b[1;30;42m' + 'Parabens' + '\x1b[0m' + " voce ganhou R$", valor)
         balan = 0
         
 
         
     else:
-        print("Poxa, não foi dessa vez. vamos outra?")
+        print('\x1b[0;30;41m' +  'Poxa, não foi dessa vez.' + '\x1b[0m' + " Vamos outra?")
         balan += 1  
         valor = valor*-1
 
+    print("    ")
 
     saldo += valor   
     
     jogadas += 1
-    print( "Vezes jogadas: ",jogadas)
+    
 
     
 #Quando o saldo zerar    
     
     if saldo <= 0:
-        jogar = input("seu saldo esta negativo, deseja adicionar mais?  ")
+        jogar = input("seu saldo esta " + '\x1b[1;30;41m' + "negativo" + '\x1b[0m' ", deseja adicionar mais?  ")
         if jogar != "nao":
             saldo += int(input("quanto deseja adicionar? "))
             while saldo < 0:
                 print("Seu saldo atual é de ", saldo)
-                print("valor ainda insuficiente")
-                perg = input("adicionar mais?")
+                print("valor ainda " '\x1b[1;30;41m' + "insuficiente" + '\x1b[0m')
+                perg = input("Adicionar mais?")
                 if perg != "nao":
                     saldo += int(input("quanto deseja adicionar? "))                    
                 else:
